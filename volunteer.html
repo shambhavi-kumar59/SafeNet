@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | SafeNet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .matching-visual {
+      background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e5f7ed;
+      color: #059669;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Join Our Volunteer Network</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">Your skills can make a difference when disasters strike. Sign up to be matched with those in need.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Volunteer Form -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="text-xl font-semibold text-gray-800 mb-6 border-b pb-2">Volunteer Application</h2>
+          
+          <form id="volunteer-form">
+            <!-- Personal Info -->
+            <div class="mb-6">
+              <h3 class="text-lg font-medium text-gray-700 mb-4">Personal Information</h3>
+              <div class="grid gap-4">
+                <div>
+                  <label for="v-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                  <input type="text" id="v-name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="v-email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                    <input type="email" id="v-email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                  </div>
+                  <div>
+                    <label for="v-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone*</label>
+                    <input type="tel" id="v-phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                  </div>
+                </div>
+                <div>
+                  <label for="v-location" class="block text-sm font-medium text-gray-700 mb-1">Location (City/State)*</label>
+                  <input type="text" id="v-location" name="location" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-6">
+              <h3 class="text-lg font-medium text-gray-700 mb-4">Skills & Availability</h3>
+              <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Select Your Skills*</label>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <div class="flex items-center">
+                    <input type="checkbox" id="first-aid" name="skills" value="first-aid" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="first-aid" class="ml-2 block text-sm text-gray-700">First Aid/Medical</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="transport" name="skills" value="transport" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="transport" class="ml-2 block text-sm text-gray-700">Transportation</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="construction" name="skills" value="construction" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="construction" class="ml-2 block text-sm text-gray-700">Construction/Repair</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="counseling" name="skills" value="counseling" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="counseling" class="ml-2 block text-sm text-gray-700">Counseling</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="logistics" name="skills" value="logistics" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="logistics" class="ml-2 block text-sm text-gray-700">Logistics</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="translation" name="skills" value="translation" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="translation" class="ml-2 block text-sm text-gray-700">Translation</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="availability" class="block text-sm font-medium text-gray-700 mb-2">Availability*</label>
+                <select id="availability" name="availability" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                  <option value="">Select availability</option>
+                  <option value="full-time">Full-time (40+ hrs/week)</option>
+                  <option value="part-time">Part-time (20-40 hrs/week)</option>
+                  <option value="occasional">Occasional (as needed)</option>
+                  <option value="emergency">Emergency response only</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Background Check -->
+            <div class="mb-6">
+              <h3 class="text-lg font-medium text-gray-700 mb-4">Background Information</h3>
+              <div class="space-y-4">
+                <div>
+                  <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Previous Disaster Response Experience</label>
+                  <textarea id="experience" name="experience" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="background-check" name="background-check" type="checkbox" required class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="background-check" class="font-medium text-gray-700">I consent to a background check*</label>
+                    <p class="text-gray-500">Required for all volunteers working directly with vulnerable populations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-end">
+              <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition">
+                Join Volunteer Network
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Matching System -->
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">How Our Matching Works</h2>
+            <div class="matching-visual rounded-lg h-64 mb-4 flex items-center justify-center">
+              <div class="bg-white bg-opacity-90 p-4 rounded-lg text-center max-w-xs">
+                <i class="fas fa-people-arrows text-green-500 text-4xl mb-2"></i>
+                <p class="font-medium">Your skills + Their needs = Perfect match</p>
+              </div>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>We analyze your skills, location, and availability</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>Match with aid requests based on proximity and need</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>Receive notifications when your skills are needed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Volunteer Stats -->
+          <div class="bg-green-600 rounded-xl shadow-sm p-6 text-white">
+            <h2 class="text-xl font-semibold mb-4">Our Volunteer Impact</h2>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="text-3xl font-bold mb-1" id="volunteer-count">0</div>
+                <div class="text-sm">Active Volunteers</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-1" id="matches-count">0</div>
+                <div class="text-sm">Successful Matches</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-1" id="hours-count">0</div>
+                <div class="text-sm">Hours Contributed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Load header and footer components
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+      
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Volunteer stats counter animation
+    const animateCount = (element, target, duration = 2000) => {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          clearInterval(timer);
+          current = target;
+        }
+        element.textContent = Math.floor(current).toLocaleString();
+      }, 16);
+    };
+
+    // Animate the volunteer stats
+    setTimeout(() => {
+      animateCount(document.getElementById('volunteer-count'), 5243);
+      animateCount(document.getElementById('matches-count'), 12876);
+      animateCount(document.getElementById('hours-count'), 89432);
+    }, 500);
+
+    // Form submission
+    document.getElementById('volunteer-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for volunteering! We will contact you shortly with next steps.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

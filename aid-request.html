@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Aid | SafeNet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .progress-bar {
+      height: 6px;
+      transition: width 0.3s ease;
+    }
+    .emergency-card {
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/6644/sea-water-ocean-waves.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Request Emergency Assistance</h1>
+        <p class="text-gray-600">Fill out this form to connect with our network of volunteers and aid organizations</p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="mb-8">
+        <div class="flex justify-between mb-2">
+          <span class="text-sm font-medium text-green-600">Form Progress</span>
+          <span class="text-sm font-medium text-gray-500" id="progress-percent">0%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2.5">
+          <div class="progress-bar bg-green-600 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+        <form id="aid-form">
+          <!-- Location Section -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">1. Location Details</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address*</label>
+                <input type="text" id="address" name="address" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City*</label>
+                <input type="text" id="city" name="city" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State/Province*</label>
+                <input type="text" id="state" name="state" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="zip" class="block text-sm font-medium text-gray-700 mb-1">ZIP/Postal Code</label>
+                <input type="text" id="zip" name="zip" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+            </div>
+          </div>
+
+          <!-- Aid Type Section -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">2. Assistance Needed*</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="flex items-center">
+                <input type="checkbox" id="food" name="aid-type" value="food" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="food" class="ml-2 block text-sm text-gray-700">Food & Water</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="shelter" name="aid-type" value="shelter" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="shelter" class="ml-2 block text-sm text-gray-700">Shelter</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="medical" name="aid-type" value="medical" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="medical" class="ml-2 block text-sm text-gray-700">Medical Assistance</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="evacuation" name="aid-type" value="evacuation" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="evacuation" class="ml-2 block text-sm text-gray-700">Evacuation Help</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">3. Contact Information*</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+              <div>
+                <label for="people" class="block text-sm font-medium text-gray-700 mb-1">Number of People*</label>
+                <input type="number" id="people" name="people" min="1" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Info -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">4. Additional Information</h2>
+            <div>
+              <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Special Needs or Details</label>
+              <textarea id="details" name="details" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-end">
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Emergency Instructions -->
+      <div class="emergency-card rounded-xl p-6 text-white">
+        <h2 class="text-2xl font-bold mb-4">Emergency Instructions While You Wait</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mt-1 mr-2 text-green-300"></i>
+            <span>Stay in a safe location and avoid unnecessary movement</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mt-1 mr-2 text-green-300"></i>
+            <span>Conserve phone battery by limiting non-essential use</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mt-1 mr-2 text-green-300"></i>
+            <span>If possible, signal your location with bright colors or lights</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mt-1 mr-2 text-green-300"></i>
+            <span>Drink clean water and avoid contaminated sources</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mt-1 mr-2 text-green-300"></i>
+            <span>Check our <a href="mental-health.html" class="text-green-300 underline">Mental Health Resources</a> if feeling distressed</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Load header and footer components
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+      
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Form progress tracking
+    const form = document.getElementById('aid-form');
+    const progressBar = document.querySelector('.progress-bar');
+    const progressPercent = document.getElementById('progress-percent');
+
+    form.addEventListener('input', () => {
+      const totalFields = 10; // Number of required fields
+      const filledFields = Array.from(form.elements).filter(el => 
+        el.required && el.value.trim() !== ''
+      ).length;
+      
+      const progress = Math.min(100, (filledFields / totalFields) * 100);
+      progressBar.style.width = `${progress}%`;
+      progressPercent.textContent = `${Math.round(progress)}%`;
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Your aid request has been submitted. A volunteer will contact you shortly.');
+      form.reset();
+      progressBar.style.width = '0%';
+      progressPercent.textContent = '0%';
+    });
+  </script>
+</body>
+</html>

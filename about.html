@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About SafeNet | Tech That Cares</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .architecture-bg {
+      background-image: url('https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="mb-16">
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <div class="p-8 md:p-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Mission: <span class="text-green-600">Tech That Cares</span></h1>
+            <p class="text-lg text-gray-600 mb-6">SafeNet was founded to bridge the gap between disaster victims and available resources through technology. We believe in leveraging innovation to save lives and reduce suffering during crises.</p>
+            <div class="flex space-x-3">
+              <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Real-time Alerts</div>
+              <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI Support</div>
+              <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Community Network</div>
+            </div>
+          </div>
+          <div class="hidden md:block bg-green-50">
+            <div class="h-full flex items-center justify-center p-8">
+              <div class="relative w-64 h-64">
+                <div class="absolute inset-0 bg-green-500 rounded-full opacity-20"></div>
+                <div class="absolute inset-4 bg-green-400 rounded-full opacity-30"></div>
+                <div class="absolute inset-8 bg-green-300 rounded-full opacity-40 flex items-center justify-center">
+                  <i class="fas fa-heart text-white text-5xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Features -->
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">How SafeNet Works</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Our integrated platform connects all stakeholders in disaster response</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="feature-card bg-white rounded-xl shadow-sm p-6">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 text-green-600">
+            <i class="fas fa-satellite-dish text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">Real-Time Data Integration</h3>
+          <p class="text-gray-600">Aggregates information from government agencies, weather services, and on-the-ground reports to provide accurate disaster tracking.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card bg-white rounded-xl shadow-sm p-6">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 text-green-600">
+            <i class="fas fa-people-arrows text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">Smart Matching System</h3>
+          <p class="text-gray-600">Our algorithm connects those in need with the nearest available volunteers and resources based on skills, location, and urgency.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card bg-white rounded-xl shadow-sm p-6">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 text-green-600">
+            <i class="fas fa-robot text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">AI Emotional Support</h3>
+          <p class="text-gray-600">Provides 24/7 mental health assistance and crisis resources when human counselors aren't immediately available.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="mb-16">
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <div class="p-8 md:p-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Platform Architecture</h2>
+            <p class="text-gray-600 mb-6">SafeNet's robust infrastructure ensures reliability during peak disaster events when it's needed most.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>Cloud-based for maximum scalability</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>Redundant systems across multiple regions</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>End-to-end encryption for all sensitive data</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle mt-1 mr-2 text-green-500"></i>
+                <span>Open API for integration with partner systems</span>
+              </li>
+            </ul>
+          </div>
+          <div class="architecture-bg min-h-64 md:min-h-0">
+            <div class="h-full flex items-center justify-center bg-black bg-opacity-50 text-white p-8">
+              <div class="text-center">
+                <i class="fas fa-server text-5xl mb-4 text-green-300"></i>
+                <h3 class="text-xl font-bold mb-2">Reliable Infrastructure</h3>
+                <p>99.99% uptime during critical events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Our Trusted Partners</h2>
+        <p class="text-gray-600">Collaborating with leading organizations in disaster response</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center justify-center h-32">
+          <div class="text-center">
+            <i class="fas fa-globe-americas text-4xl text-green-500 mb-2"></i>
+            <span class="font-medium">Global Relief</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center justify-center h-32">
+          <div class="text-center">
+            <i class="fas fa-medkit text-4xl text-green-500 mb-2"></i>
+            <span class="font-medium">MedAid Intl</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center justify-center h-32">
+          <div class="text-center">
+            <i class="fas fa-home text-4xl text-green-500 mb-2"></i>
+            <span class="font-medium">ShelterFirst</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center justify-center h-32">
+          <div class="text-center">
+            <i class="fas fa-heartbeat text-4xl text-green-500 mb-2"></i>
+            <span class="font-medium">Mental Health Alliance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-green-600 rounded-xl shadow-sm p-8 text-white">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold mb-2" id="communities-served">0</div>
+          <div class="text-sm">Communities Served</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2" id="volunteers">0</div>
+          <div class="text-sm">Trained Volunteers</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2" id="resources-delivered">0</div>
+          <div class="text-sm">Resources Delivered</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2" id="lives-impacted">0</div>
+          <div class="text-sm">Lives Impacted</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Load header and footer components
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+      
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Animate statistics
+    const animateValue = (id, start, end, duration) => {
+      let startTimestamp = null;
+      const element = document.getElementById(id);
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        element.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    // Animate all stats when scrolled into view
+    const statsSection = document.querySelector('section.bg-green-600');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateValue('communities-served', 0, 142, 2000);
+        animateValue('volunteers', 0, 5243, 2000);
+        animateValue('resources-delivered', 0, 12876, 2000);
+        animateValue('lives-impacted', 0, 89432, 2000);
+        observer.unobserve(statsSection);
+      }
+    }, { threshold: 0.5 });
+
+    observer.observe(statsSection);
+  </script>
+</body>
+</html>
